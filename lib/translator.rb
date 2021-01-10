@@ -16,8 +16,9 @@ def load_library(file_path)
 def get_japanese_emoticon(file_path, emoticon)
   hashtable = load_library(file_path)
   j_emo = ""
+  #if the english is == to emoticon, puts japanese value
   hashtable.each do |key, value|
-    if value[emoticon] == :english
+    if value[:english] == emoticon
       j_emo = :japanese
     end
   end
