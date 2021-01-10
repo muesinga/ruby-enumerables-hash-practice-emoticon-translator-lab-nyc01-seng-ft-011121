@@ -19,7 +19,7 @@ def get_japanese_emoticon(file_path, emoticon)
   #if the english is == to emoticon, puts japanese value
   hashtable.each do |key, value|
     if value[:english] == emoticon
-      j_emo = hashtable[:japanese]
+      j_emo = value[:japanese]
     end
   end
   
